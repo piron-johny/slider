@@ -3,11 +3,11 @@ function getRandomInt(max) {
 }
 
 function sliderPlagin(activeSlide) {
-  
-  slides[activeSlide].classList.add('active');
-
   const container = document.querySelector('.container');
   const slides = document.querySelectorAll('.slide');
+
+  slides[activeSlide].classList.add('active');
+
 
   container.addEventListener('click', onCickSlides)
 
@@ -25,3 +25,5 @@ function sliderPlagin(activeSlide) {
 }
 
 sliderPlagin(getRandomInt(5))
+
+console.log(getRandomInt(5));
