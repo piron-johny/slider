@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  overflow: hidden;
+  margin: 0;
+  background: #6e6e6e;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.slide {
+  height: 80vh;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 0.7;
+  position: relative;
+  cursor: pointer;
+  transition: transform 200ms linear;
+}
+
+.slide:hover {
+  box-shadow: 0px 3px 10px rgb(143, 143, 143);
+  transform: translateY(-10px);
+}
+
+.slide:not(:last-child) {
+  margin-right: 10px;
+}
+
+.slide h3 {
+  font-size: 20px;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 400;
+  text-shadow: 0px 1px 3px #353535;
+  font-size: 24px;
+  opacity: 0;
+}
+
+.slide.active {
+  flex: 5;
+  background-size: cover;
+  transition: flex 400ms linear;
+  transform: translateY(0);
+}
+
+.slide.active:hover {
+  box-shadow: none;
+}
+
+.slide.active h3 {
+  transition: opacity 1s linear;
+  opacity: 1;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+}
